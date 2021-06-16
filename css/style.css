@@ -1,0 +1,40 @@
+.mydivs {
+    border: 4px solid rebeccapurple;
+    padding: 10px;
+}
+
+#heading1 {
+    color: blue;
+}
+
+.cube {
+    height: 100px;
+    width: 100px;
+    background-color: cyan;
+    padding: 20px;
+    margin: 20px;
+}
+
+.myheading {
+    border: 2px solid blue;
+    margin: 5px;
+    width: 150px;
+    padding: 10px;
+}
+
+div p {
+    color: red;
+}
+
+div li {
+    color: blueviolet;
+}
+
+li {
+    color: crimson;
+}
+
+#mydiv {
+    border: 2px solid purple;
+    padding: 10px;
+}

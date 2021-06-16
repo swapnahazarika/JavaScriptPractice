@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>Regular Expression</title>
+
+<script type="text/javascript">
+/*
+\d ----match any digit (equal to [0-9])
+\w-----match any word character(equal to [a-z , A-Z , 0-9 & _])
+\s----match whitespace character(eg- spaces & tabs)
+\t----match a tab only
+*/
+
+function validate(){
+    var text = document.getElementById("txt").value;
+    var regx =/^([a-z0-9\.-]+)@([a-z0-9-]+).([a-z]{2,8})(.[a-z]{2,8})?$/;
+    //var regx = /^[6-9]\d{9}$/;
+    //var regx = /^[5-9][a-z]{8}[0]$/;
+    if(regx.test(text)){
+        document.getElementById("lbluser").innerHTML="Valid Mobile no"
+        document.getElementById("lbluser").style.visibility="visible";
+        document.getElementById("lbluser").style.color="Green";
+
+    }else{
+        document.getElementById("lbluser").innerHTML="Invalid";
+        document.getElementById("lbluser").style.visibility="visible";
+        document.getElementById("lbluser").style.color="Red";
+    }
+    
+}
+
+</script>
+</head>
+<body>
+    <form>
+        <!-- <input id="txt" placeholder="Mobile Number" type="text"/><br> -->
+        <input id="txt" placeholder="EmailId" type="text"/><br>
+        <label id="lbluser" style="visibility: hidden;">Valid</label>         
+        <br><br>
+                <button onclick="validate()" type="button">Submit</button>
+    </form>
+   
+</body>
+</html>
+

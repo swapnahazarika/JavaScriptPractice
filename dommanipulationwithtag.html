@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title>DOM Manipulation with getelementByTagName</title>
+    <script type="text/javascript">
+        /* DOM Manipulation and getelementbyTagName method */
+        //--------------------------------------------------------------------------------------------
+        /* function changeStyling() {
+            var para = document.getElementsByTagName("p");
+            para[0].style.fontSize = 30;
+            para[1].style.color = "red";
+            para[2].style.fontStyle = "italic";
+            para[2].style.color = "blue";
+            para[3].style.color = "yellow";
+            para[4].style.color = "purple";
+            para[4].style.fontWeight = "bold";
+            para[5].style.color = "green";
+
+        }*/
+        /* DOM Manipulation and getelementbyClassName method
+        --------------------------------------------------------------------------------------------------*/
+        function changeStyling(){
+            var element = document.getElementsByClassName("Mypara");
+            for(var x=0; x<element.length; x++){
+                element[x].style.color="red";
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <p class="Mypara">This is paragraph 1</p>
+    <p>This is paragraph 2</p>
+    <p class="Mypara">This is paragraph 3</p>
+    <p>This is paragraph 4</p>
+    <p class="Mypara">This is paragraph 5</p>
+    <p>This is paragraph 6</p>
+    <a href="#" class="Mypara">Anchor tag </a>
+    <br>
+    <button onclick="changeStyling()">Click Here</button>
+</body>
+
+</html>

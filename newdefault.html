@@ -1,0 +1,74 @@
+<html>
+
+<head>
+  <title>jQuery Selectors </title>
+
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+  <h2>Selectors jQuery</h2>
+  <p>This is the paragraph outside div</p>
+  <h2>Selectors jQuery</h2>
+  <table>
+    <tr>
+      <td>
+        <div id="firstdiv" class="myheading">
+          <p>This is first paragraph for first div</p>
+          <p>This is second paragraph for first div</p>
+
+        </div>
+      </td>
+      <td>
+        <div id="seconddiv" class="myheading">
+          <p>This is third paragraph for second div</p>
+
+        </div>
+      </td>
+      <td>
+        <div id="thirddiv" class="myheading">
+          <ul>
+            <li>List item 1</li>
+            <li>List item 2</li>
+            <li>List item 3</li>
+            <li>List item 4</li>
+            <li>List item 5</li>
+          </ul>
+
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <ul>
+    <li>List item 1</li>
+    <li>List item 2</li>
+    <li>List item 3</li>
+    <li>List item 4</li>
+    <li>List item 5</li>
+  </ul>
+  <br>
+  <button id="btn1">Click me</button>
+</body>
+<!-- <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script> -->
+<script src="JS/jquery.js"></script>
+<script>
+
+  $(document).ready(function () {
+
+    $("button").click(fn1);
+    function fn1() {
+      // $("h2").fadeToggle();//element selactor
+      //$("#heading1").fadeToggle();//Id selector
+      //$(".myheading").fadeToggle();//classname selector
+      $("#firstdiv,p").fadeToggle(1000);
+    }
+
+  })
+
+</script>
+
+</html>

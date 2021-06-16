@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <title>Introduction to jQuery UI </title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="jqueryui/jquery-ui.css">
+    <link rel="stylesheet" href="jqueryui/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jqueryui/jquery-ui.theme.css">
+</head>
+
+<body>
+    <!-- <h3>Autocomplete Widget in jQuery UI</h3>
+    <div id="mydiv">
+        <label><b>Enter Your Favorite City</b></label>
+        <input type="text" name="" id="citytext">
+    </div> -->
+
+    <h3>Draggable features in jQuery UI</h3>
+    <div>
+        <div class="cube">
+            <h3>CUBE1</h3>
+        </div>
+        <div class="cube">
+            <h3>CUBE2</h3>
+        </div>
+    </div>
+</body>
+<script src="js/jquery.js"></script>
+<script src=jqueryui/jquery-ui.js></script>
+<script>
+    // var mycity = ["Guwahati", "Goa", "New Delhi", "Mumbai", "Gujrat", "Bangalore", "Pandicherry",
+    //     "Kerala", "Calcutta", "Tripura", "Sikim", "Himachal"
+    // ];
+    // $("#citytext").autocomplete({
+    //     source: mycity
+    // }, {
+    //     autoFocus: true,
+    //     delay: 0,
+
+    // });
+    $(".cube").draggable({
+        axis: "x",
+        containment: "parent", //different option of this property see the link  
+    });
+</script>
+
+</html>

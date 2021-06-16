@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <title>DOM Manipulation with getelementByTagName</title>
+    <script type="text/javascript">
+
+        /* mouseover and mouseout events
+        --------------------------------------------------------------------------------------------------*/
+        function setNewImage() {
+            document.getElementById("img1").src = "images/Mercedes-Benz.png";
+        }
+        function setOldImage() {
+            document.getElementById("img1").src = "images/lexus.png"
+
+        }
+    </script>
+</head>
+
+<body>
+    <img id="img1" onmouseover="setNewImage()" onmouseout="setOldImage()" src="images/lexus.png" width="300" />
+</body>
+
+</html>

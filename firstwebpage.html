@@ -1,0 +1,135 @@
+<html>
+
+<head>
+    <title>Introduction to jQuery UI </title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="jqueryui/jquery-ui.css">
+    <link rel="stylesheet" href="jqueryui/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jqueryui/jquery-ui.theme.css">
+</head>
+
+<body>
+    <!-- <div id="mydiv">
+        <h2>Introduction to jQuery UI </h2>
+        <input id="text1" type="text" placeholder="Click to enter date" title="Enter date">
+        <br><br><br>
+        <input id="text2" type="text" placeholder="Enter name" title="Enter Name">
+    </div> -->
+    <h3>Widget Manipulation</h3>
+    <button id="actionbutton">Change</button>
+    <br>
+    <br>
+    <div id="dateinput" title="MyCalander">
+    </div>
+    <div id="panels" style="width: 80%">
+        <h3>About Swapna</h3>
+        <p>DOB:18/08/1989;Address:Nagaon;Education:MCA;Gender:Female</p>
+        <h3>About Ranjan</h3>
+        <p>DOB:07/12/1988;Address:Nagaon;Education:MCA;Gender:Male</p>
+        <h3>About Megha</h3>
+        <p>DOB:26/07/2018;Address:Nagaon;Education:NA;Gender:Female DOB:26/07/2018;Address:Nagaon;Education:NA;Gender:Female DOB:26/07/2018;Address:Nagaon;Education:NA;Gender:Female DOB:26/07/2018;Address:Nagaon;Education:NA;Gender:Female DOB:26/07/2018;Address:Nagaon;Education:NA;Gender:Female
+            DOB:26/07/2018;Address:Nagaon;Education:NA;Gender:Female DOB:26/07/2018;Address:Nagaon;Education:NA;Gender:Female DOB:26/07/2018;Address:Nagaon;Education:NA;Gender:Female DOB:26/07/2018;Address:Nagaon;Education:NA;Gender:Female DOB:26/07/2018;Address:Nagaon;Education:NA;Gender:Female
+        </p>
+        <h3>About Bhabna</h3>
+        <p>DOB:26/07/2018;Address:Nagaon;Education:NA;Gender:Female</p>
+
+    </div>
+    <br>
+    <!-- <h2>UI for MessageBox</h2>
+    <div id="firstdiv" class="mydivs">
+        <h3>Hello Welcome to my first webpage</h3>
+        <br>
+        <button id="btn1">Click to Show Message Box</button>
+    </div> -->
+    <br>
+    <div id="messagebox" title="Messagebox">
+        <h3>This is a dummy title</h3>
+        <img src="images/lexus.png" width="200px">
+    </div>
+</body>
+<script src="js/jquery.js"></script>
+<script src=jqueryui/jquery-ui.js></script>
+<script>
+    $(document).ready(function() {
+
+
+        //$("#btn1").click(function() {
+        $("#messagebox").dialog({
+            title: "Custom MessageBox",
+            draggable: true,
+            resizable: true,
+            height: 300,
+            width: 300,
+            modal: false,
+            // buttons: [{
+            //         text: "Close",
+            //         icon: "ui-icon-heart",
+            //         click: function() {
+            //             $(this).dialog("close");
+            //         }
+            //     },
+
+            //     {
+            //         text: "OK",
+            //         icon: "ui-icon-heart",
+            //         click: function() {
+            //             $(this).dialog("close");
+            //         }
+            //     }
+            // ],
+
+        });
+        //})
+        $("#panels").accordion({
+            collapsible: true,
+            event: "click", //click,mouseover
+            animate: 300,
+            active: 1, //(starting from 0)
+            heightStyle: true,
+            icons: {
+                header: "ui-icon-plus",
+                activeHeader: "ui-icon-minus"
+            }
+
+        });
+        $("#dateinput").datepicker({
+            // numberOfMonths: [2, 3],
+            numberOfMonths: 1,
+            changeYear: true,
+            changeMonth: true,
+            showWeek: true,
+            showOtherMonths: true,
+            weekHeader: "No of Week",
+            // minDate: new Date(2020, 0, 9),
+            //maxDate: '0'
+
+        })
+        $("#text2,#text1").tooltip({
+            track: true,
+            //content:"Some text for title"
+            show: {
+                effect: "highlight",
+                duration: 3000
+            }, //other effect:pulsate,highlight,explode,blind
+            hide: {
+                effect: "explode",
+                duration: 3000
+            } //other effect:pulsate,highlight,explode,blind
+
+
+        });
+        $("#actionbutton").click(function() {
+            // Getter
+            //var height = $("#messagebox").dialog("option", "height");
+            //alert(height);
+
+            // Setter
+            $("#messagebox").dialog("option", "height", 800);
+
+
+            $("#dateinput").datepicker("option", "numberOfMonths", 2);
+        })
+    })
+</script>
+
+</html>

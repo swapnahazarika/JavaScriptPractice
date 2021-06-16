@@ -1,0 +1,78 @@
+<html>
+
+<head>
+    <title>Introduction to objects</title>
+    <script type="text/javascript">
+        /* DOM Manipulation and getelementbyId method */
+
+        //--------------------------------------------------------------------------------------------
+        // function buttonClick()
+        // {
+        //     //alert("button clicked");
+        //     //document.getElementById("heading2").innerHTML="Swapna Hazarika";
+
+        //     //var str = document.getElementById("heading2").innerHTML;
+        //     //alert(str);
+        //     var str1 = document.getElementById("txt1").value;
+
+        //     var str2 = document.getElementById("txt2").value;
+        //     if (str1 == str2){
+        //        alert("username and password is same");
+        //     }else{
+        //         alert("username and password is not same");
+        //     }
+
+        //}
+        //----------------------------------------------------------------------------------------
+        // function fun1() {
+        //     var rd1 = document.getElementById("rd1");
+        //     var rd2 = document.getElementById("rd2");
+        //     if (rd1.checked == true)
+        //         alert("the selected name is " + rd1.value);
+        //     else if (rd2.checked == true)
+        //         alert("the selected name is " + rd2.value);
+        //     else
+        //         alert(" No name is selected");
+
+        // }
+        //--------------------------------------------------------------------------------------------
+
+        function fn1(){
+            var select = document.getElementById("select");
+            alert(select.options[select.selectedIndex].value);
+        }
+
+    </script>
+</head>
+
+<body>
+    <!-- code for input textbox -->
+    <!-- <input id="txt1" placeholder="user name">
+        <br><br>
+        <input id ="txt2" type="password" placeholder="password">
+        <br>
+        <button onclick="buttonClick()">Click Me</button>
+        <h2 id="heading2">Some Random Text</h2> -->
+
+    <!-- code for input radiobutton -->
+    <!-- <input id="rd1" name="grp1" type="radio" value="Swapna"> Swapna </input><br>
+    <input id="rd2" name="grp1" type="radio" value="Ranjan"> Ranjan </input><br>
+    <input type="reset" value="Reset">
+    <button onclick="fun1()" id="btn1">Click me</button> -->
+
+    <!-- code for input selectbox -->
+        <select id="select">
+            <option value="Nothing Selected">Select an Option</option>
+            <option value="BCA">BCA</option>
+            <option value="MCA">MCA</option>
+            <option value="MSW">MSW</option>
+            <option value="BBA">BBA</option>
+            <option value="LLB">LLB</option>
+            <option value="LLM">LLM</option>
+        </select>
+        <button onclick="fn1()">Click here</button>
+
+
+</body>
+
+</html>
